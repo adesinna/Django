@@ -1,0 +1,14 @@
+When you click a link on  your web page, the  application (web browser) sends a request through a socket(port)
+and the server sends back the page needed through the same port the browser to be displayed.
+
+Hyper Text Transfer Protocol(HTTP)
+    These are the set of rules that browsers use to talk to web servers.
+
+Network Sockets:
+    The application will talk to another application using sockets
+
+
+
+Ports:
+    They are like extensions attached to the ip.
+

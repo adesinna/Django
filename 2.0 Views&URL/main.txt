@@ -1,0 +1,29 @@
+Apps:
+    Suppose you have a website that consists of a blog, forum and comments, each part of this website could be an app
+    in django
+
+    When you create an app, it creates a directory with a bunch of files that the app will need.
+
+    views.py:
+        This is where the response of the request of the user is processed, and served back to the client.
+        They are written as python function.
+
+
+
+    To create an app:
+        python manage.py startapp app1
+
+
+        - go to app/views.py
+            create your views as a function
+
+        - create a file called urls.py in the app directory
+
+            create the urlpatterns in the app/urls.py file
+
+        - go to project/urls.py and include the app url
+
+
+    How Django works:
+        A request go to the root_config in the project settings, which its value is always project.urls
+        next it redirects it to the appropriate app urls.py where it will fetch the view that is associated with it.

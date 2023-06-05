@@ -1,0 +1,47 @@
+1.0 How to create an environment and install django in it:
+
+    To activate:
+        python3 -m venv env_name
+        source env_name/bin/activate
+
+    To deactivate:
+        deactivate
+
+    To install django:
+        pip install django (==version to get the particular one) and pip is already installed in the environment
+
+    To check version:
+        python3 -m django --version
+
+
+    django-admin startproject mysite
+
+        -manage.py:
+            A command-line utility that lets you interact with this Django project in various ways.
+            You can read all the details about manage.py in django-admin and manage.py.
+
+
+        - inner mysite:
+            This is the where all the project related files are
+
+            - mysite/__init__.py
+                This file tells python that the directory that it is a python package
+
+            - mysite/settings.py
+                This contains all the configuration for the django project. Example like database configuration
+
+            - mysite/urls.py
+                This contains all the url patterns that will handle the requests
+
+            -mysite/asgi.py:
+            An entry-point for ASGI-compatible web servers to serve your project.
+
+            -mysite/wsgi.py:
+            An entry-point for WSGI-compatible web servers to serve your project.
+
+
+
+        Connecting to local server:
+            Go to the directory where manage.py is located
+
+                python manage.py runserver

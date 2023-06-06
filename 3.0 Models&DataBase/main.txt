@@ -1,0 +1,64 @@
+Every site you see has data, like the way POLOM site has images, and they are all stored in a database.
+
+What are Models?
+    Models are the blueprint which can be used to create database tables
+    Models are nothing but classes in Python
+    Models are created in the models.py file
+    To create a database table called Students, which will consist of all the student data on the website. We are to
+    create a class called Student in the models.py file.
+
+
+    Installed_APPS in settings are the apps that are connected to the database tables.
+    To connect them to the database table you need to run:
+
+        python manage.py migrate
+
+    To create a database
+        - go to model and create the model class
+
+        - register the app in the INSTALLED_APPS in settings
+            go to apps and copy the class name associated with your app
+            then go add app1.apps.App1Config #the class name in apps in App1Config
+
+        - tell django you have made migrations
+            python manage.py makemigrations (app_name)
+
+        - tell python to create the table in the database
+            python manage.py migrate
+
+
+    Adding data to the database table
+
+        Using Python Shell
+            - python manage.py shell
+            - from app1.models import Item
+            - Item.objects.all() # shows you all the rows in the table
+            - a = Item(item_name="Pizza", item_description="suya on pizza", item_price=50) # state the attribute explicitly
+            - a.save() # to save the item
+            - a.pk or a.id will automatically be created in the database
+            - Item.objects.values() # in a better json  format
+            - after creating the method for it to return strings when all is called in the database. logout and login into the shell
+
+
+
+    You can use django admin interface to manage the database instead of using shell
+
+    Create superuser
+        python manage.py createsuperuser
+
+        go to app/admin.py and register the model
+
+        go to
+            http://127.0.0.1:8000/admin/
+
+            You will be able
+
+
+
+    You can view the Item in the database in view
+        go to view
+
+        import the class from .models
+
+        item_list = Item.objects.all()
+

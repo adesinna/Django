@@ -1,0 +1,23 @@
+Templates allow you render html pages in view.py
+
+
+To create a template for an app:
+    - create a directory in the app folder called templates
+    - in that templates, create another folder with the app name
+    - create your html in templates/app1/
+    - use render to get the page
+    - context is used to render models database content in your html
+
+Template Syntax
+{% for item in list %}
+    {{ item }}
+    {{ item.attribute }} # this can
+{% endfor %}
+
+
+Getting detailed View:
+    This displays the database details for each item in the database
+
+    - create the view (detail)
+    - create the template
+    - create the url

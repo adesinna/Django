@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Django Page</title>
+</head>
+<body>
+
+
+
+    <h1>Click for Detailed View </h1>
+        {% for item in Item_list %}
+            <ul>
+                <li>
+                    <a href="{% url 'app1:detail' item.id %}"> {{item.item_name}}</a> <!-- this is how to hide the url-->
+                </li>
+            </ul>
+        {% endfor %}
+
+</body>
+</html>

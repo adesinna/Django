@@ -1,0 +1,26 @@
+Static files are used to style your html in django.
+
+- create a folder called static/app1 in the app folder
+- create your styling
+- then go to index.hmtl and follow the load
+
+
+Because a project might have different apps there are some basic templates that is needed across the apps, example
+like navbar.
+
+    Create a template called base.html
+
+    use bootstrap, index.html and base.html, item.html
+
+
+
+Adding image fields
+
+    Go to model and add the image attributes
+    give the image as a link in the field and give a default
+    apply migrations to store in database
+        python manage.py makemigrations app1
+
+        python manage.py migrate app1
+
+    src="{{ item.item_image}}
